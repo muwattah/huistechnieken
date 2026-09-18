@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-charcoal: #1C1F24;
+  --color-off-white: #F7F5F2;
+  --color-warm-gray: #E8E4DF;
+  --color-mid-gray: #6B6661;
+  --color-accent: #2F4A5E;
+  --color-white: #FFFFFF;
+  --color-success: #2E5A3C;
+  --color-error: #8B3A3A;
+  --max-width: 1280px;
+  --radius: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-off-white text-charcoal font-sans antialiased;
+}
+
+/* Precise Lines visual signature */
+.precise-line {
+  @apply relative;
+}
+.precise-line::after {
+  content: "";
+  @apply absolute bottom-0 left-0 h-px bg-warm-gray w-full;
+}
+.precise-line-accent::after {
+  @apply bg-accent;
+}
+
+.section-label {
+  @apply text-xs uppercase tracking-[0.15em] text-mid-gray font-medium;
+}
+
+/* Focus styles */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-accent;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
