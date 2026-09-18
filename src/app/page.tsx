@@ -122,14 +122,12 @@ export default function HomePage() {
               </div>
             </div>
             <div className="lg:col-span-5">
-              <div className="aspect-[4/5] bg-warm-gray relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center px-6">
-                    <div className="w-12 h-px bg-mid-gray/40 mx-auto mb-4" />
-                    <p className="text-sm text-mid-gray">Technische installaties</p>
-                    <p className="text-xs text-mid-gray/80 mt-1">Oosterzele · sinds 2020</p>
-                  </div>
-                </div>
+              <div className="aspect-[4/5] bg-warm-gray relative overflow-hidden">
+                <img
+                  src="https://static.wixstatic.com/media/11062b_aef3b79b6fa24e0185f4fd2725eb0e55~mv2.jpg/v1/fill/w_1200,h_1500,al_c,q_85,usm_0.66_1.00_0.01/hero.jpg"
+                  alt="Huistechnieken \u2014 technische installaties"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
